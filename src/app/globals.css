@@ -65,7 +65,56 @@ body {
     @apply gradient-text;
     background-image: linear-gradient(to right, #c084fc, #8b5cf6);
   }
+  /* 紫色系渐变 */
+  .text-gradient-purple-dream {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #c084fc, #8b5cf6);
+  }
   
+  .text-gradient-purple-dusk {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #e879f9, #9333ea);
+  }
+  
+  .text-gradient-purple-mystic {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #d8b4fe, #818cf8);
+  }
+  
+  .text-gradient-purple-royal {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #a855f7, #6366f1);
+  }
+  
+  .text-gradient-purple-twilight {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #c084fc, #f0abfc);
+  }
+  
+  .text-gradient-purple-galaxy {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #a78bfa, #f472b6);
+  }
+  
+  .text-gradient-purple-nebula {
+    @apply gradient-text;
+    background-image: linear-gradient(45deg, #9333ea, #6366f1, #ec4899);
+  }
+  
+  .text-gradient-purple-magic {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #c084fc, #7c3aed, #4f46e5);
+  }
+  
+  .text-gradient-purple-aurora {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #e879f9, #8b5cf6, #60a5fa);
+  }
+  
+  .text-gradient-purple-midnight {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #a855f7, #4c1d95);
+  }
   .text-gradient-northern {
     @apply gradient-text;
     background-image: linear-gradient(to right, #4ade80, #2dd4bf, #38bdf8);
@@ -137,12 +186,12 @@ body {
     
     .text-gradient-white-cloud {
       @apply gradient-text;
-      background-image: linear-gradient(to right, #ffffff, #fcfcfc, rgba(255, 255, 255, 0.75));
+      background-image: linear-gradient(to right, #ffffff, #fcfcfc, rgba(255, 255, 255, 0.205));
     }
     
     .text-gradient-white-silk {
       @apply gradient-text;
-      background-image: linear-gradient(45deg, #ffffff, #f8f8f8, rgba(255, 255, 255, 0.9));
+      background-image: linear-gradient(45deg, #ffffff, #99969640, rgba(185, 173, 173, 0.615));
     }
     
     .text-gradient-white-ghost {

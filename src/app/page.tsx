@@ -6,7 +6,7 @@ import RSSPreview from '@/components/RSSPreview'
 import InfoComparison from '@/components/InfoComparison'
 import WeChatHub from '@/components/WeChatHub'
 import Testimonials from '@/components/Testimonials'
-import FeatureComparison from '@/components/FeatureComparison'
+// import FeatureComparison from '@/components/FeatureComparison'
 import PricingPlans from '@/components/PricingPlans'
 import BlogNews from '@/components/BlogNews'
 import Navbar from '@/components/Navbar'
@@ -23,7 +23,7 @@ export default function Home() {
         <InfoComparison />
         <WeChatHub />
         <Testimonials />
-        <FeatureComparison />
+        {/* <FeatureComparison /> */}
         <PricingPlans />
         <BlogNews />
       </main>
