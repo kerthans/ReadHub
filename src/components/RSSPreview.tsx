@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 const RSSPreview = () => {
   const [activeCategory, setActiveCategory] = useState('全部文章')
-  const [hoveredArticle, setHoveredArticle] = useState(null)
+  const [hoveredArticle, setHoveredArticle] = useState<number | null>(null)
 
   const categories = [
     { name: '全部文章', icon: <Newspaper className="w-4 h-4" /> },
