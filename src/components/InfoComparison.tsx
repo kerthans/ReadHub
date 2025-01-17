@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { CheckCircle, XCircle } from 'lucide-react'
-import React from 'react'
+import React, { useRef } from 'react'
 
 const InfoComparison = () => {
+  const containerRef = useRef(null)
+
   const comparisons = [
     {
       traditional: {
@@ -14,7 +16,9 @@ const InfoComparison = () => {
           { text: "内容冗长，浪费时间", negative: true },
           { text: "无法快速提取核心信息", negative: true },
           { text: "信息更新不及时", negative: true }
-        ]
+        ],
+        gradient: "from-red-500/10 to-orange-500/10",
+        iconColor: "text-red-500"
       },
       readhub: {
         title: "ReadHub 智能聚合",
@@ -23,113 +27,156 @@ const InfoComparison = () => {
           { text: "AI智能总结，提炼重点", negative: false },
           { text: "实时更新，及时推送", negative: false },
           { text: "个性化推荐，精准投放", negative: false }
-        ]
+        ],
+        gradient: "from-blue-500/10 to-purple-500/10",
+        iconColor: "text-green-500"
       }
     }
   ]
 
+  const features = [
+    {
+      title: "节省80%阅读时间",
+      description: "AI智能总结，快速获取核心信息",
+      gradient: "text-gradient-ocean"
+    },
+    {
+      title: "提高信息获取效率",
+      description: "一站式聚合，告别信息分散",
+      gradient: "text-gradient-purple-dream"
+    },
+    {
+      title: "个性化信息推送",
+      description: "基于兴趣的智能推荐系统",
+      gradient: "text-gradient-emerald"
+    }
+  ]
+
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section ref={containerRef} className="relative py-32 overflow-hidden">
+      {/* 背景渐变 */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
       
-      {/* Animated background elements */}
+      {/* 动态光效背景 */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse delay-1000" />
+        <div className="absolute bottom-1/3 left-1/2 w-96 h-96 bg-cyan-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse delay-2000" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-24"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r text-gradient-fire bg-clip-text text-transparent">
             为什么选择 ReadHub
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            对比传统的信息获取方式，ReadHub 为您带来全新的阅读体验
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            对比传统的信息获取方式，ReadHub 为您带来
+            <span className="text-white font-medium mx-2">全方位升级</span>
+            的阅读体验
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* 对比卡片 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {comparisons.map((comparison, index) => (
             <React.Fragment key={index}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="p-6 backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="group p-8 backdrop-blur-xl bg-gradient-to-br border border-white/10 rounded-2xl overflow-hidden"
               >
-                <h3 className="text-xl font-semibold mb-6 text-gray-400">
+                <h3 className="text-2xl font-semibold mb-8 text-gray-400">
                   {comparison.traditional.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {comparison.traditional.points.map((point, pointIndex) => (
-                    <div
+                    <motion.div
                       key={pointIndex}
-                      className="flex items-center space-x-3 text-gray-400"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: pointIndex * 0.1 }}
+                      className="flex items-center space-x-4 text-gray-400"
                     >
-                      <XCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                      <span>{point.text}</span>
-                    </div>
+                      <XCircle className="w-6 h-6 text-red-500/80 group-hover:text-red-500 flex-shrink-0" />
+                      <span className="text-lg">{point.text}</span>
+                    </motion.div>
                   ))}
+                </div>
+                
+                {/* 光效扫过动画 */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </div>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="p-6 backdrop-blur-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10 rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="group p-8 backdrop-blur-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10 rounded-2xl overflow-hidden"
               >
-                <h3 className="text-xl font-semibold mb-6">
+                <h3 className="text-2xl font-semibold mb-8 text-white">
                   {comparison.readhub.title}
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {comparison.readhub.points.map((point, pointIndex) => (
-                    <div
+                    <motion.div
                       key={pointIndex}
-                      className="flex items-center space-x-3"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: pointIndex * 0.1 }}
+                      className="flex items-center space-x-4"
                     >
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span>{point.text}</span>
-                    </div>
+                      <CheckCircle className="w-6 h-6 text-green-400 group-hover:text-green-300 flex-shrink-0" />
+                      <span className="text-lg text-white">{point.text}</span>
+                    </motion.div>
                   ))}
+                </div>
+
+                {/* 光效扫过动画 */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </div>
               </motion.div>
             </React.Fragment>
           ))}
         </div>
 
-        {/* Feature Highlight */}
+        {/* 特性亮点 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl"
+          className="relative rounded-3xl overflow-hidden"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "节省80%阅读时间",
-                description: "AI智能总结，快速获取核心信息"
-              },
-              {
-                title: "提高信息获取效率",
-                description: "一站式聚合，告别信息分散"
-              },
-              {
-                title: "个性化信息推送",
-                description: "基于兴趣的智能推荐系统"
-              }
-            ].map((feature, index) => (
-              <div key={index} className="text-center">
-                <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
-                <p className="text-gray-400">{feature.description}</p>
-              </div>
-            ))}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10" />
+          <div className="relative p-12 backdrop-blur-xl border border-white/10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -5 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center space-y-4"
+                >
+                  <div className={`text-4xl lg:text-5xl font-bold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent`}>
+                    {feature.title.split(' ')[0]}
+                  </div>
+                  <h4 className="text-xl font-semibold text-white">{feature.title}</h4>
+                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

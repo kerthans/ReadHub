@@ -97,7 +97,7 @@ const Testimonials = () => {
               key={index}
               className="p-6 backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl text-center"
             >
-              <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 mb-2">
+              <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r text-gradient-primary mb-2">
                 {stat.value}
               </div>
               <div className="text-gray-400">{stat.label}</div>

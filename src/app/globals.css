@@ -31,17 +31,6 @@ body {
     @apply gradient-text;
     background-image: linear-gradient(to right, #ffffff, #f3f3f3, rgba(255, 255, 255, 0.9));
   }
-}
-/* 自定义渐变文本类 */
-@layer utilities {
-  .text-gradient-white {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70;
-  }
-  
-  .text-gradient-primary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
-  }
-
   .text-gradient-blue {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600;
   }
@@ -49,7 +38,135 @@ body {
   .bg-gradient-primary {
     @apply bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
   }
+  .title-gradient-primary{
+    @apply bg-gradient-to-r from-blue-400 to-purple-500;
+  }
+  .text-gradient-aurora {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #00ff87, #60efff);
+  }
+  
+  .text-gradient-sunset {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ff8c42, #ff5252);
+  }
+  
+  .text-gradient-ocean {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #0396ff, #00d4ff);
+  }
+  
+  .text-gradient-emerald {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #34d399, #10b981);
+  }
+  
+  .text-gradient-purple-dream {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #c084fc, #8b5cf6);
+  }
+  
+  .text-gradient-northern {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #4ade80, #2dd4bf, #38bdf8);
+  }
+  
+  .text-gradient-cosmic {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #8b5cf6, #d946ef, #f43f5e);
+  }
+  
+  .text-gradient-fire {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #f59e0b, #ef4444);
+  }
+
+  /* 对应的背景渐变 */
+  .bg-gradient-aurora {
+    @apply bg-gradient-to-r from-[#00ff87] to-[#60efff];
+  }
+  
+  .bg-gradient-sunset {
+    @apply bg-gradient-to-r from-[#ff8c42] to-[#ff5252];
+  }
+  
+  .bg-gradient-ocean {
+    @apply bg-gradient-to-r from-[#0396ff] to-[#00d4ff];
+  }
+  
+  .bg-gradient-emerald {
+    @apply bg-gradient-to-r from-[#34d399] to-[#10b981];
+  }
+  
+  .bg-gradient-purple-dream {
+    @apply bg-gradient-to-r from-[#c084fc] to-[#8b5cf6];
+  }
+  
+  .bg-gradient-northern {
+    @apply bg-gradient-to-r from-[#4ade80] via-[#2dd4bf] to-[#38bdf8];
+  }
+  
+  .bg-gradient-cosmic {
+    @apply bg-gradient-to-r from-[#8b5cf6] via-[#d946ef] to-[#f43f5e];
+  }
+  
+  .bg-gradient-fire {
+    @apply bg-gradient-to-r from-[#f59e0b] to-[#ef4444];
+  }
+
+    /* 高级白色系渐变 */
+    .text-gradient-white-pure {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, #ffffff, rgba(255, 255, 255, 0.85));
+    }
+    
+    .text-gradient-white-silver {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, #f5f5f5, rgba(255, 255, 255, 0.9));
+    }
+    
+    .text-gradient-white-pearl {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, #fafafa, #f0f0f0);
+    }
+    
+    .text-gradient-white-frost {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+    }
+    
+    .text-gradient-white-cloud {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, #fcfcfc, rgba(255, 255, 255, 0.75));
+    }
+    
+    .text-gradient-white-silk {
+      @apply gradient-text;
+      background-image: linear-gradient(45deg, #ffffff, #f8f8f8, rgba(255, 255, 255, 0.9));
+    }
+    
+    .text-gradient-white-ghost {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    }
+    
+    .text-gradient-white-crystal {
+      @apply gradient-text;
+      background-image: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85));
+    }
+    
+    /* 带有轻微彩色调的白色渐变 */
+    .text-gradient-white-warm {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, #fff5f5, rgba(255, 245, 245, 0.9));
+    }
+    
+    .text-gradient-white-cool {
+      @apply gradient-text;
+      background-image: linear-gradient(to right, #ffffff, #f5f7ff, rgba(245, 247, 255, 0.9));
+    }
 }
+
 
 /* 动画效果 */
 @keyframes float {
@@ -292,4 +409,14 @@ body {
 
 .animate-pulse-slow {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
 }
