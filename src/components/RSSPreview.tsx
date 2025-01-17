@@ -43,7 +43,7 @@ const RSSPreview = () => {
   const smartTags = ['AI', '科技创新', '创业', '投资', '生活方式', '效率工具', '前沿科技']
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-32 overflow-hidden" id="rss">
       {/* 渐变背景 */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
       

@@ -55,7 +55,7 @@ const WeChatHub = () => {
   ]
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-32 overflow-hidden" id="features">
       {/* Enhanced Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
       
@@ -205,7 +205,7 @@ const WeChatHub = () => {
                 inline-flex items-center space-x-2 hover:from-blue-600 hover:to-purple-600 transition-all
                 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
             >
-              <span>开始订阅</span>
+              <span>由此开始</span>
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </div>

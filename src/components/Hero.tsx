@@ -65,7 +65,7 @@ const Hero = () => {
               <motion.span
                 className="block mt-2 text-gradient-cosmic hover:scale-105 transition-transform duration-300"
               >
-                信息获取方式
+                信息食谱
               </motion.span>
             </h1>
 

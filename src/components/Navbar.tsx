@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X ,Sparkles,} from 'lucide-react'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -42,23 +42,26 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/30 transition-shadow duration-300" />
-                  <div className="absolute inset-0 w-10 h-10 rounded-xl bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <span className="text-2xl font-bold text-white/90 drop-shadow-sm group-hover:text-white transition-colors duration-300">
-                  ReadHub
-                </span>
-              </Link>
+            <Link href="/" className="group flex items-center space-x-3">
+              <motion.div 
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+                className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg"
+              >
+                <Sparkles className="w-7 h-7 text-white" />
+              </motion.div>
+              <span className="text-3xl font-bold text-gradient-white-warm group-hover:text-white transition-colors duration-300">
+                ReadHub
+              </span>
+            </Link>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-2">
               <div className="flex items-center space-x-1">
+              <NavLink href="#ai">AI 总结</NavLink>
+              <NavLink href="#rss">订阅管理</NavLink>
                 <NavLink href="#features">特性</NavLink>
-                <NavLink href="#ai">AI 总结</NavLink>
-                <NavLink href="#rss">订阅管理</NavLink>
                 <NavLink href="#comparison">对比</NavLink>
                 <NavLink href="#pricing">价格</NavLink>
               </div>

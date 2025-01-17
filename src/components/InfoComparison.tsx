@@ -53,7 +53,7 @@ const InfoComparison = () => {
   ]
 
   return (
-    <section ref={containerRef} className="relative py-32 overflow-hidden">
+    <section ref={containerRef} className="relative py-32 overflow-hidden" id="comparison">
       {/* 背景渐变 */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
       

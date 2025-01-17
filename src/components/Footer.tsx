@@ -22,15 +22,15 @@ const Footer = () => {
     { name: "首页", href: "/" },
     { name: "功能", href: "#features" },
     { name: "价格", href: "#pricing" },
-    { name: "博客", href: "#blog" },
-    { name: "关于我们", href: "#about" }
+    { name: "博客", href: "/more" },
+    { name: "关于我们", href: "/more" }
   ]
 
   const features = [
     { name: "AI 智能总结", href: "#ai", description: "智能提炼核心观点" },
     { name: "RSS 订阅", href: "#rss", description: "一站式信息聚合" },
-    { name: "公众号聚合", href: "#wechat", description: "热门内容速览" },
-    { name: "数据分析", href: "#analysis", description: "深度洞察趋势" }
+    { name: "公众号聚合", href: "/more", description: "热门内容速览" },
+    { name: "数据分析", href: "/more", description: "深度洞察趋势" }
   ]
 
   const contact = [
@@ -113,7 +113,7 @@ const Footer = () => {
               >
                 <Sparkles className="w-7 h-7 text-white" />
               </motion.div>
-              <span className="text-3xl font-bold text-white/90 drop-shadow-sm group-hover:text-white transition-colors duration-300">
+              <span className="text-3xl font-bold text-gradient-white-warm group-hover:text-white transition-colors duration-300">
                 ReadHub
               </span>
             </Link>
@@ -251,7 +251,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-400">
-              <span>© 2024 ReadHub.</span>
+              <span>© 2025 ReadHub.</span>
               <span>保留所有权利</span>
             </div>
             <div className="flex items-center space-x-6 text-sm">

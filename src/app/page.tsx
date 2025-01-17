@@ -20,8 +20,8 @@ export default function Home() {
         <Hero />
         <AIFeatures />
         <RSSPreview />
-        <InfoComparison />
         <WeChatHub />
+        <InfoComparison />
         <Testimonials />
         {/* <FeatureComparison /> */}
         <PricingPlans />

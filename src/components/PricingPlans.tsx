@@ -90,7 +90,7 @@ const PricingPlans = () => {
   }
 
   return (
-    <section className="relative py-32 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black">
+    <section className="relative py-32 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black" id ="pricing">
       {/* 动态背景光效 */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full mix-blend-overlay filter blur-3xl animate-blob" />
