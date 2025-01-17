@@ -129,7 +129,136 @@ body {
     @apply gradient-text;
     background-image: linear-gradient(to right, #f59e0b, #ef4444);
   }
+  /* 极光系列 */
+  .text-gradient-arctic {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #88d3ce, #6e45e2);
+  }
 
+  .text-gradient-borealis {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #a8e6cf, #3bb2b8, #7868e6);
+  }
+
+  /* 自然系列 */
+  .text-gradient-forest {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #2ecc71, #26a69a);
+  }
+
+  .text-gradient-autumn {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #f6d365, #fda085);
+  }
+
+  .text-gradient-spring {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #96fbc4, #f9f586);
+  }
+
+  /* 糖果系列 */
+  .text-gradient-candy {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
+  }
+
+  .text-gradient-bubble-gum {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ff758c, #ff7eb3);
+  }
+
+  /* 星空系列 */
+  .text-gradient-milky-way {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #0f2027, #2c5364, #203a43);
+  }
+
+  .text-gradient-starlight {
+    @apply gradient-text;
+    background-image: linear-gradient(45deg, #2c3e50, #3498db, #2ecc71);
+  }
+
+  /* 海洋系列 */
+  .text-gradient-deep-ocean {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #1a2980, #26d0ce);
+  }
+
+  .text-gradient-coral-reef {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ff6b6b, #4ecdc4);
+  }
+
+  /* 金属系列 */
+  .text-gradient-rose-gold {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #f6c3cf, #e2a5bc, #d987a9);
+  }
+
+  .text-gradient-silver {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #bdc3c7, #8e9eab, #2c3e50);
+  }
+
+  /* 霓虹系列 */
+  .text-gradient-neon-blue {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #00c6fb, #005bea);
+  }
+
+  .text-gradient-neon-pink {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ff00cc, #333399);
+  }
+
+  /* 宝石系列 */
+  .text-gradient-ruby {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #f50057, #d500f9);
+  }
+
+  .text-gradient-sapphire {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+  }
+
+  .text-gradient-emerald-plus {
+    @apply gradient-text;
+    background-image: linear-gradient(45deg, #43cea2, #185a9d);
+  }
+
+  /* 日落系列 */
+  .text-gradient-twilight {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ff512f, #dd2476);
+  }
+
+  .text-gradient-desert {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #f9d423, #ff4e50);
+  }
+
+  /* 现代科技系列 */
+  .text-gradient-cyber {
+    @apply gradient-text;
+    background-image: linear-gradient(45deg, #00f2fe, #4facfe, #0012fe);
+  }
+
+  .text-gradient-matrix {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #20bf55, #01baef);
+  }
+
+  /* 梦幻系列 */
+  .text-gradient-unicorn {
+    @apply gradient-text;
+    background-image: linear-gradient(to right, #ffb3d9, #b6ffff, #ffd6ff);
+  }
+
+  .text-gradient-fairy {
+    @apply gradient-text;
+    background-image: linear-gradient(45deg, #ffdee9, #b5fffc, #d8ffed);
+  }
   /* 对应的背景渐变 */
   .bg-gradient-aurora {
     @apply bg-gradient-to-r from-[#00ff87] to-[#60efff];
