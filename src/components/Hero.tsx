@@ -99,7 +99,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button 
-              onClick={() => router.push('/login')} 
+              onClick={() => router.push('/more')} 
               className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
             >
               <span className="flex items-center space-x-2">
@@ -109,7 +109,7 @@ const Hero = () => {
             </button>
             
             <button 
-            onClick={() => router.push('https://github.com/kerthans/ReadHub')} 
+            onClick={() => router.push('https://drive.google.com/file/d/1e-3RWrh6PmAxnBIMUPxJ3f6T2EuZLEwa/view?usp=sharing')} 
             className="px-8 py-4 rounded-xl border border-white/10 hover:bg-white/5 transition-all duration-300 hover:border-white/20">
               查看功能演示
             </button>
