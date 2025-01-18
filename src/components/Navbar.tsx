@@ -70,7 +70,7 @@ const Navbar = () => {
               
               <div className="pl-4 ml-4 border-l border-white/10">
                 <button 
-                onClick={() => router.push('/login')}
+                onClick={() => router.push('/more')}
                 className="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:scale-105 active:scale-95 transition-all duration-300">
                   开始使用
                 </button>
