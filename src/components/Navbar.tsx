@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { Menu, X ,Sparkles,} from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
+  const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -67,7 +69,9 @@ const Navbar = () => {
               </div>
               
               <div className="pl-4 ml-4 border-l border-white/10">
-                <button className="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:scale-105 active:scale-95 transition-all duration-300">
+                <button 
+                onClick={() => router.push('/login')}
+                className="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:scale-105 active:scale-95 transition-all duration-300">
                   开始使用
                 </button>
               </div>

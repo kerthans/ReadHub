@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Zap, Book, Newspaper } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+  const router = useRouter()
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced background effects */}
@@ -96,14 +98,19 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105">
+            <button 
+              onClick={() => router.push('/login')} 
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+            >
               <span className="flex items-center space-x-2">
                 立即开始体验
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
             
-            <button className="px-8 py-4 rounded-xl border border-white/10 hover:bg-white/5 transition-all duration-300 hover:border-white/20">
+            <button 
+            onClick={() => router.push('https://github.com/kerthans/ReadHub')} 
+            className="px-8 py-4 rounded-xl border border-white/10 hover:bg-white/5 transition-all duration-300 hover:border-white/20">
               查看功能演示
             </button>
           </motion.div>
